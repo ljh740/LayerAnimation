@@ -23,7 +23,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(100, 100, 200, 100);
     [self.view addSubview:btn];
-    [btn setTitle:@"点我开始" forState:UIControlStateNormal];
+    [btn setTitle:@"start" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     
     CAGradientLayer *layer = CAGradientLayer.new;
