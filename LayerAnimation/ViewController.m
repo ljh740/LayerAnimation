@@ -21,8 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(100, 100, 200, 100);
+    btn.frame = CGRectMake(100, 100, 200, 50);
     [self.view addSubview:btn];
+    btn.layer.masksToBounds = YES;
+    btn.layer.cornerRadius = 25.f;
     [btn setTitle:@"start" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -32,9 +34,9 @@
     layer.endPoint = CGPointMake(1, 0);
     // 渐变颜色
     self.colors = [NSMutableArray arrayWithArray: @[
-        (id)RGB_COLOR(169, 145, 211).CGColor,
-        (id)RGB_COLOR(249,193,235).CGColor,
-        (id)RGB_COLOR(168, 192, 237).CGColor
+        (id)RGB_COLOR(159, 72, 251).CGColor,
+        (id)RGB_COLOR(255, 92, 137).CGColor,
+        (id)RGB_COLOR(255, 150, 122).CGColor
     ]];
     
     layer.colors = self.colors.copy;
